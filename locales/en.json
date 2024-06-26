@@ -1,0 +1,20 @@
+{
+  "Index": {
+    "title": "Hello world👋!",
+    "contact": "Contact",
+    "services": "Services",
+    "resume": "Resume",
+    "work": "Work",
+    "home": "Home",
+    "hireMe": "Hire me"
+  },
+  "Home": {
+    "profession": "Software Developer",
+    "hello": "Hello 👋 I'm",
+    "slogan": "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.",
+    "workExperience": "Years of experiences",
+    "projectCompleted": "Projects completed",
+    "masterTechnologies": "Technologies mastered",
+    "codeCommit": "Code committed"
+  }
+}

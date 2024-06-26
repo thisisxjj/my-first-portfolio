@@ -1,0 +1,20 @@
+{
+  "Index": {
+    "title": "你好,世界👋!",
+    "work": "工作",
+    "contact": "联系",
+    "services": "职业",
+    "resume": "简历",
+    "home": "首页",
+    "hireMe": "聘用我"
+  },
+  "Home": {
+    "profession": "软件工程师",
+    "hello": "你好 👋, 我是",
+    "slogan": "我擅长打造优雅的数字体验，并且精通各种编程语言和技术, 从前端到后端，我掌控每一行代码，驱动数字世界的未来。",
+    "workExperience": "年工作经验",
+    "projectCompleted": "个项目完成",
+    "masterTechnologies": "个关键技术点",
+    "codeCommit": "次代码提交"
+  }
+}
