@@ -1,7 +1,8 @@
 import MotionContainer from '@/components/work/MotionContainer'
-import WorkContent from '@/components/work/WorkContent'
+import WorkContent, { Project } from '@/components/work/WorkContent'
+import { getWorkProjectData } from '@/lib/notion'
 
-const projects = [
+/* const projects = [
   {
     num: '01',
     category: 'frontend',
@@ -35,12 +36,14 @@ const projects = [
     live: '',
     github: '',
   },
-]
+] */
 
-const WorkPage = () => {
+const WorkPage = async ({ params }: { params: { locale: string } }) => {
+  const { locale } = params
+  const projects = await getWorkProjectData(locale)
   return (
     <MotionContainer>
-      <WorkContent projects={projects} />
+      <WorkContent projects={projects as Project[]} />
     </MotionContainer>
   )
 }

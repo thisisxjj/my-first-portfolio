@@ -14,12 +14,13 @@ import {
   TooltipTrigger,
 } from '../ui/tooltip'
 import WorkSliderBtns from './WorkSliderBtns'
+import { useMessages } from 'next-intl'
 
 interface ProjectStackItem {
   name: string
 }
 
-interface Project {
+export interface Project {
   num: string
   category: string
   title: string
@@ -36,6 +37,8 @@ interface WorkContentProps {
 
 const WorkContent = ({ projects }: WorkContentProps) => {
   const [project, setProject] = useState(projects[0])
+  const messages = useMessages()
+  const workMessages = messages.Work as Record<string, string>
 
   const handleSlideChange = (swiper: SwiperType) => {
     const currentIndex = swiper.realIndex
@@ -47,18 +50,23 @@ const WorkContent = ({ projects }: WorkContentProps) => {
     <div className="flex flex-col xl:flex-row xl:gap-[30px]">
       <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
         <div className="flex flex-col gap-[30px] h-[50%]">
-          <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-            {project.num}
+          <div className="flex gap-4 items-center">
+            <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+              {project.num}
+            </div>
+            <h2 className="text-[42px] font-bold leading-none text-white capitalize">
+              {project.title}
+            </h2>
           </div>
-          <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-            {project.category} project
-          </h2>
+          <h3 className="text-[22px] font-bold leading-none text-white/80 capitalize">
+            {project.category}
+          </h3>
           <p className="text-white/60">{project.description}</p>
-          <ul className="flex gap-4">
+          <ul className="flex flex-wrap gap-4">
             {project.stack.map((stack, index) => (
               <li key={stack.name} className="text-xl text-accent">
                 {stack.name}
-                {index !== projects.length - 1 && <span>,</span>}
+                {index !== project.stack.length - 1 && <span>,</span>}
               </li>
             ))}
           </ul>
@@ -73,7 +81,7 @@ const WorkContent = ({ projects }: WorkContentProps) => {
                     <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Live Project</p>
+                    <p>{workMessages['liveProject']}</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -85,7 +93,7 @@ const WorkContent = ({ projects }: WorkContentProps) => {
                     <BsGithub className="text-white text-3xl group-hover:text-accent" />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>Github Repository</p>
+                    <p>{workMessages['githubRepo']}</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -113,7 +121,7 @@ const WorkContent = ({ projects }: WorkContentProps) => {
                 <Image
                   src={project.image}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   alt=""
                 />
               </div>

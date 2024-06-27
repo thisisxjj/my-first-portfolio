@@ -31,6 +31,8 @@
     "formEmail": "Email Address",
     "formPhone": "Phone Number",
     "formMessage": "Type your message here",
-    "formSubmit": "Send Message"
+    "formSubmit": "Send Message",
+    "githubRepo": "Github Repository",
+    "liveProject": "Live Project"
   }
 }

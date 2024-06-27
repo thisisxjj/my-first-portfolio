@@ -41,33 +41,35 @@ export const getAboutMeData = cache((locale: string) => {
     })
 })
 
-export const getContactData = cache((locale: string) => {
+export const getWorkProjectData = cache((locale: string) => {
   return notionClient.databases
     .query({
       sorts: [{ property: 'sortNum', direction: 'ascending' }],
-      database_id: process.env.NOTION_ABOUT_DATABASE_ID!,
+      database_id: process.env.NOTION_PROJECT_DATABASE_ID!,
     })
     .then((data) => {
-      const newData = data.results
-        .map((item: any) => {
-          let name = ''
-          let value = ''
-          for (let key in item.properties) {
-            const [curName, curLocale] = key.split('_')
-            if (locale === curLocale) {
-              if (curName === 'field') {
-                name = item.properties[key]?.rich_text[0]?.text.content
-              } else {
-                value = item.properties[key]?.rich_text[0]?.text?.content
-              }
+      const newData = data.results.map((item: any) => {
+        const newItem = {} as Record<string, any>
+        for (let key in item.properties) {
+          const [name, curLocale] = key.split('_')
+          const curObj = item.properties[key]
+          const type = curObj?.type
+          const curValObj = curObj?.[type] || []
+          if (curLocale && curLocale === locale) {
+            newItem[name] = curValObj[0]?.text.content
+          } else if (!curLocale) {
+            if (key === 'stack') {
+              newItem[name] = curValObj.map((it: any) => ({
+                name: it.name,
+              }))
+            } else {
+              newItem[name] = curValObj[0]?.text.content ?? ''
             }
           }
+        }
 
-          return { name, value }
-        })
-        .filter(({ name }) => [''])
-
-      console.log('data ==>', JSON.stringify(data))
-      return Promise.resolve(newData)
+        return newItem
+      })
+      return newData
     })
 })

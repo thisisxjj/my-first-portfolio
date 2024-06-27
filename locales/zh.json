@@ -31,6 +31,8 @@
     "formEmail": "邮箱地址",
     "formPhone": "电话号码",
     "formMessage": "请在这里输入相关信息",
-    "formSubmit": "发送消息"
+    "formSubmit": "发送消息",
+    "githubRepo": "Github 仓库",
+    "liveProject": "在线示例"
   }
 }
