@@ -18,11 +18,11 @@ jobs:
       # 制作docker镜像并推送到阿里云容器镜像服务
       - name: build and push docker image
         run: |
-          echo ${{ secrets.ALIYUN_DOCKER_PASSWORD }} | docker login ${{ REGISTRY_MIRROR }} --username ${{ secrets.ALIYUN_DOCKER_USERNAME }} --password-stdin
+          echo ${{ secrets.ALIYUN_DOCKER_PASSWORD }} | docker login ${{ vars.REGISTRY_MIRROR }} --username ${{ secrets.ALIYUN_DOCKER_USERNAME }} --password-stdin
 
           docker image build -t ${{ vars.APP_NAME }}:latest .
-          docker tag ${{ vars.APP_NAME }} ${{ REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
-          docker push ${{ REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
+          docker tag ${{ vars.APP_NAME }} ${{ vars.REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
+          docker push ${{ vars.REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
           docker logout
 
           echo "app name ${{ vars.REGISTRY_MIRROR }}"
@@ -43,13 +43,13 @@ jobs:
             docker container rm ${{ vars.APP_NAME }}
 
             echo -e "4.docker image rm==>"
-            docker image rm ${{ REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
+            docker image rm ${{ vars.REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
 
             echo -e "5.docker pull==>"
-            docker pull ${{ REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
+            docker pull ${{ vars.REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
 
             echo -e "6.docker container create and start==>"
-            docker container run -d -p 3000:3000 --name ${{ vars.APP_NAME }} ${{ REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
+            docker container run -d -p 3000:3000 --name ${{ vars.APP_NAME }} ${{ vars.REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
 
             echo -e "7.docker logout==>"
             docker logout
