@@ -24,6 +24,8 @@ jobs:
           docker tag my-first-portfolio registry.cn-heyuan.aliyuncs.com/thisisxjj/my-first-portfolio:latest
           docker push registry.cn-heyuan.aliyuncs.com/thisisxjj/my-first-portfolio:latest
           docker logout
+
+          echo "app name ${{ vars.APP_NAME }}"
       # 登录远程服务器，拉取镜像，制作并重启容器
       # https://github.com/marketplace/actions/remote-ssh-commands
       #- name: ssh remote deploy
