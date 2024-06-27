@@ -168,7 +168,6 @@ const skills = {
 const ResumePage = async ({ params }: { params: { locale: string } }) => {
   const { locale } = params
   const data = await getAboutMeData(locale)
-  console.log('page data', JSON.stringify(data))
 
   return (
     <MotionContainer>
