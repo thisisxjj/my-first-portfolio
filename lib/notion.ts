@@ -40,3 +40,34 @@ export const getAboutMeData = cache((locale: string) => {
       return Promise.resolve(newData)
     })
 })
+
+export const getContactData = cache((locale: string) => {
+  return notionClient.databases
+    .query({
+      sorts: [{ property: 'sortNum', direction: 'ascending' }],
+      database_id: process.env.NOTION_ABOUT_DATABASE_ID!,
+    })
+    .then((data) => {
+      const newData = data.results
+        .map((item: any) => {
+          let name = ''
+          let value = ''
+          for (let key in item.properties) {
+            const [curName, curLocale] = key.split('_')
+            if (locale === curLocale) {
+              if (curName === 'field') {
+                name = item.properties[key]?.rich_text[0]?.text.content
+              } else {
+                value = item.properties[key]?.rich_text[0]?.text?.content
+              }
+            }
+          }
+
+          return { name, value }
+        })
+        .filter(({ name }) => [''])
+
+      console.log('data ==>', JSON.stringify(data))
+      return Promise.resolve(newData)
+    })
+})

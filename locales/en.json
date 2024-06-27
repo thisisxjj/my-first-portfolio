@@ -16,5 +16,21 @@
     "projectCompleted": "Projects completed",
     "masterTechnologies": "Technologies mastered",
     "codeCommit": "Code committed"
+  },
+  "Work": {
+    "phone": "Phone",
+    "phoneValue": "(+86) 152 7277 9735",
+    "email": "Email",
+    "emailValue": "xiazhe.super@outlook.com",
+    "address": "Address",
+    "addressValue": "Wuhan, Hubei, China",
+    "formTitle": "Let's work together",
+    "formDesc": "If you're reading this, if your team is recruiting, if you think I'm a good fit, send me a message and I'll get right back to you!",
+    "formName": "Full Name",
+    "formCompany": "Company Name",
+    "formEmail": "Email Address",
+    "formPhone": "Phone Number",
+    "formMessage": "Type your message here",
+    "formSubmit": "Send Message"
   }
 }

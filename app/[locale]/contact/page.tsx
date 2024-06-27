@@ -1,27 +1,30 @@
 import ContactForm from '@/components/contact/ContactForm'
 import MotionContainer from '@/components/contact/MotionContainer'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 import { FaEnvelope, FaMapMarkedAlt, FaPhoneAlt } from 'react-icons/fa'
 
 const info = [
   {
     icon: <FaPhoneAlt />,
-    title: 'Phone',
-    description: '(+86) 15272779735',
+    name: 'phone',
+    value: 'phoneValue',
   },
   {
     icon: <FaEnvelope />,
-    title: 'Email',
-    description: 'youremail@gmail.com',
+    name: 'email',
+    value: 'emailValue',
   },
   {
     icon: <FaMapMarkedAlt />,
-    title: 'Address',
-    description: 'Wuhan, China',
+    name: 'address',
+    value: 'addressValue',
   },
 ]
 
 const ContactPage = () => {
+  const t = useTranslations('Work')
+
   return (
     <MotionContainer>
       <div className="flex flex-col xl:flex-row gap-[30px]">
@@ -31,13 +34,13 @@ const ContactPage = () => {
         <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
           <ul className="flex flex-col gap-10">
             {info.map((item) => (
-              <li key={item.title} className="flex items-center gap-6">
+              <li key={item.name} className="flex items-center gap-6">
                 <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
                   <div className="text-[28px]">{item.icon}</div>
                 </div>
                 <div className="flex-1">
-                  <p className="text-white/60">{item.title}</p>
-                  <h3 className="text-xl">{item.description}</h3>
+                  <p className="text-white/60">{t(item.name)}</p>
+                  <h3 className="text-xl">{t(item.value)}</h3>
                 </div>
               </li>
             ))}
