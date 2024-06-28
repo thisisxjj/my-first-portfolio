@@ -25,7 +25,10 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      className="scrollbar-thin scrollbar-thumb-accent scrollbar-track-[#27272c]"
+    >
       <body className={jetBrainsMono.className}>
         <NextIntlClientProvider messages={messages}>
           <Header />

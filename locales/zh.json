@@ -17,6 +17,16 @@
     "masterTechnologies": "个关键技术点",
     "codeCommit": "次代码提交"
   },
+  "Services": {
+    "webDev": "前端开发工程师",
+    "webDevDesc": "我是一名前端 Web 开发人员，热衷于创建美观且实用的网站。凭借我的经验，我开发了广泛的网络应用程序，包括网站、移动应用程序和微信小程序。",
+    "backendDev": "后端开发工程师",
+    "backendDevDesc": "同时我也是一名后端开发工程师，开发过多种后端服务，包括 RESTful API、微服务等。后端相关的技术栈有Java、Spring Boot、Node JS、Express、Koa等。",
+    "testDev": "自动化测试工程师",
+    "testDevDesc": "我也是一名自动化测试工程师，在第一家公司主要从事三维引擎的自动化测试工作，负责自动化测试脚本编写，通过使用puppeteer、mocha来实现三维引擎的自动化UI测试，在其他项目中也经常编写相关的单元测试代码。",
+    "operationDev": "运维工程师",
+    "operationDevDesc": "我也是能够胜任运维的工作，在几家工作经历中担任过许多前后端项目的上线、部署和维护工作，了解项目上线流程以及自动化持续集成和持续部署实施过程，有着丰富的运维经验。"
+  },
   "Work": {
     "phone": "电话",
     "phoneValue": "15272779735",

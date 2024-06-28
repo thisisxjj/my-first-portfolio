@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 import animate from 'tailwindcss-animate'
+import scrollbar from 'tailwind-scrollbar'
 
 const config: Config = {
   content: [
@@ -35,6 +36,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, scrollbar],
 }
 export default config

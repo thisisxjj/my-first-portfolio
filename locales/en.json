@@ -17,6 +17,16 @@
     "masterTechnologies": "Technologies mastered",
     "codeCommit": "Code committed"
   },
+  "Services": {
+    "webDev": "Frontend Web Development",
+    "webDevDesc": "I am a frontend web developer with a passion for creating beautiful and functional websites. with my experience, I have developed a wide range of web applications, including websites, mobile applications, and WeChat applet.",
+    "backendDev": "Backend Development",
+    "backendDevDesc": "At the same time, I am also a back-end development engineer and have developed a variety of back-end services, including RESTful APIs, microservices, etc. Back-end related technology stacks include Java, Spring Boot, Node JS, Express, Koa, etc.",
+    "testDev": "Automation Test Engineer",
+    "testDevDesc": "I am also an automation test engineer, in the first company mainly engaged in 3D engine automation test work, responsible for automation test script writing, through the use of puppeteer, mocha to realize the automation of the 3D engine UI test, in other projects also often write related unit test code.",
+    "operationDev": "Operations Engineer",
+    "operationDevDesc": "I am also capable of operations and maintenance work, in several work experience as many front and back-end project on-line, deployment and maintenance work, to understand the project on-line process as well as automated continuous integration and continuous deployment of the implementation process, has a wealth of experience in operations and maintenance."
+  },
   "Work": {
     "phone": "Phone",
     "phoneValue": "(+86) 152 7277 9735",

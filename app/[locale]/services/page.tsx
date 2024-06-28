@@ -1,41 +1,41 @@
 'use client'
 
 import { BsArrowDownRight } from 'react-icons/bs'
-import Link from 'next/link'
+import { Link } from '@/navigation'
 import { motion } from 'framer-motion'
+import { useMessages } from 'next-intl'
 
 const services = [
   {
     num: '01',
-    title: 'Web Development',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
-    href: '',
+    title: 'webDev',
+    description: 'webDevDesc',
+    href: 'resume',
   },
   {
     num: '02',
-    title: 'Backend Development',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
-    href: '',
+    title: 'backendDev',
+    description: 'backendDevDesc',
+    href: 'resume',
   },
   {
     num: '03',
-    title: 'Automation Test Engineer',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
-    href: '',
+    title: 'testDev',
+    description: 'testDevDesc',
+    href: 'resume',
   },
   {
     num: '04',
-    title: 'Operations Engineer',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
-    href: '',
+    title: 'operationDev',
+    description: 'operationDevDesc',
+    href: 'resume',
   },
 ]
 
 const ServicesPage = () => {
+  const messages = useMessages()
+  const servicesMessages = messages.Services as Record<string, string>
+
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
@@ -65,10 +65,10 @@ const ServicesPage = () => {
                 </div>
                 {/* title */}
                 <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
-                  {title}
+                  {servicesMessages[title]}
                 </h2>
                 {/* description */}
-                <p className="text-white/60">{description}</p>
+                <p className="text-white/60">{servicesMessages[description]}</p>
                 {/* border */}
                 <div className="border-b border-white/20 w-full"></div>
               </div>
