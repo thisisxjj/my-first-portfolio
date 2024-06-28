@@ -1,11 +1,25 @@
-'use client'
+import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import CountNum from '@/components/not-found/CountNum'
+import { Button } from '@/components/ui/button'
 
 export default function NotFound() {
+  const t = useTranslations('NotFound')
+
   return (
-    <html>
-      <body className="text-center">
-        <h1 className="mt-10 font-semibold">Something went wrong!</h1>
-      </body>
-    </html>
+    <section className="h-screen w-screen overflow-hidden font-secondary flex flex-col items-center justify-center">
+      <CountNum />
+      <div className="flex items-center flex-col gap-4">
+        <h2 className="capitalize">{t('main')}</h2>
+        <div className="text-center">
+          <p>{t('desc1')}</p>
+          <p>{t('desc2')}</p>
+        </div>
+
+        <Button type="button">
+          <Link href="/">{t('back')}</Link>
+        </Button>
+      </div>
+    </section>
   )
 }

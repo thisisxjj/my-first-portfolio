@@ -14,6 +14,7 @@ type AboutMeDataItem = {
 export type AboutMeDataType = Array<AboutMeDataItem>
 
 export const getAboutMeData = cache((locale: string) => {
+  throw new Error()
   return notionClient.databases
     .query({
       sorts: [{ property: 'sortNum', direction: 'ascending' }],

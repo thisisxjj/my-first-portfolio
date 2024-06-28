@@ -7,16 +7,16 @@ import {
   FaVuejs,
 } from 'react-icons/fa'
 import { SiNextdotjs, SiTailwindcss } from 'react-icons/si'
-import { IconBase } from 'react-icons'
+import { getTranslations } from 'next-intl/server'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
-import { ScrollArea } from '@/components/ui/scroll-area'
 import { getAboutMeData } from '@/lib/notion'
 import MotionContainer from '@/components/resume/MotionContainer'
 import ExperienceContent from '@/components/resume/ExperienceContent'
 import EducationContent from '@/components/resume/EducationContent'
 import SkillsContent from '@/components/resume/SkillsContent'
 import AboutContent from '@/components/resume/AboutContent'
+import type { Metadata } from 'next'
 
 const about = {
   title: 'About Me',
@@ -165,9 +165,19 @@ const skills = {
   ],
 }
 
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'Index' })
+  return { title: `${t('resume')} - This is Xjj` }
+}
+
 const ResumePage = async ({ params }: { params: { locale: string } }) => {
   const { locale } = params
   const data = await getAboutMeData(locale)
+  console.log('data ===> ', data)
 
   return (
     <MotionContainer>

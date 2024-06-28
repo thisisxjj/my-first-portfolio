@@ -1,8 +1,10 @@
+import { getTranslations } from 'next-intl/server'
 import ContactForm from '@/components/contact/ContactForm'
 import MotionContainer from '@/components/contact/MotionContainer'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { FaEnvelope, FaMapMarkedAlt, FaPhoneAlt } from 'react-icons/fa'
+import type { Metadata } from 'next'
 
 const info = [
   {
@@ -21,6 +23,15 @@ const info = [
     value: 'addressValue',
   },
 ]
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'Index' })
+  return { title: `${t('contact')} - This is Xjj` }
+}
 
 const ContactPage = () => {
   const t = useTranslations('Work')

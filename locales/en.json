@@ -44,5 +44,12 @@
     "formSubmit": "Send Message",
     "githubRepo": "Github Repository",
     "liveProject": "Live Project"
+  },
+  "NotFound": {
+    "title": "404",
+    "main": "Page not found",
+    "desc1": "This may not mean anything.",
+    "desc2": "I'm probably working on something that has blown up.",
+    "back": "Back to Home"
   }
 }

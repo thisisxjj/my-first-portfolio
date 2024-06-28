@@ -6,7 +6,8 @@
     "services": "职业",
     "resume": "简历",
     "home": "首页",
-    "hireMe": "聘用我"
+    "hireMe": "聘用我",
+    "404": "404"
   },
   "Home": {
     "profession": "软件工程师",
@@ -44,5 +45,12 @@
     "formSubmit": "发送消息",
     "githubRepo": "Github 仓库",
     "liveProject": "在线示例"
+  },
+  "NotFound": {
+    "title": "404",
+    "main": "页面未找到",
+    "desc1": "这也许并不意味着什么。",
+    "desc2": "我可能在研究什么爆炸了的东西。",
+    "back": "返回首页"
   }
 }

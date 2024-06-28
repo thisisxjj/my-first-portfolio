@@ -1,7 +1,5 @@
 'use client'
 
-const Error = () => {
-  return <div>Something Error</div>
-}
+import Error from './[locale]/error'
 
 export default Error

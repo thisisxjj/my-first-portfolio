@@ -1,9 +1,20 @@
+import { getTranslations } from 'next-intl/server'
+import { useTranslations } from 'next-intl'
+import { FiDownload } from 'react-icons/fi'
 import Photo from '@/components/socials/Photo'
 import Socials from '@/components/socials/Socials'
 import Stats from '@/components/socials/Stats'
 import { Button } from '@/components/ui/button'
-import { useTranslations } from 'next-intl'
-import { FiDownload } from 'react-icons/fi'
+import type { Metadata } from 'next'
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'Index' })
+  return { title: `${t('home')} - This is Xjj` }
+}
 
 const Home = () => {
   const t = useTranslations('Home')
