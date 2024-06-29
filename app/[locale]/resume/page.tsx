@@ -177,7 +177,6 @@ export async function generateMetadata({
 const ResumePage = async ({ params }: { params: { locale: string } }) => {
   const { locale } = params
   const data = await getAboutMeData(locale)
-  console.log('data ===> ', data)
 
   return (
     <MotionContainer>
