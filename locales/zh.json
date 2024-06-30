@@ -58,7 +58,9 @@
     "formMessage": "请在这里输入相关信息",
     "formSubmit": "发送消息",
     "githubRepo": "Github 仓库",
-    "liveProject": "在线示例"
+    "noGithubRepo": "无Github仓库",
+    "liveProject": "在线示例",
+    "noLivePro": "无在线示例"
   },
   "NotFound": {
     "title": "404",

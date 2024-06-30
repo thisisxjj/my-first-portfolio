@@ -81,7 +81,11 @@ const WorkContent = ({ projects }: WorkContentProps) => {
                     <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{workMessages['liveProject']}</p>
+                    <p>
+                      {project.live
+                        ? workMessages['liveProject']
+                        : workMessages['noLivePro']}
+                    </p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -93,7 +97,13 @@ const WorkContent = ({ projects }: WorkContentProps) => {
                     <BsGithub className="text-white text-3xl group-hover:text-accent" />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>{workMessages['githubRepo']}</p>
+                    <p>
+                      {
+                        workMessages[
+                          project.github ? 'githubRepo' : 'noGithubRepo'
+                        ]
+                      }
+                    </p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>

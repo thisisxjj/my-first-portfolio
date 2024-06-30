@@ -57,7 +57,9 @@
     "formMessage": "Type your message here",
     "formSubmit": "Send Message",
     "githubRepo": "Github Repository",
-    "liveProject": "Live Project"
+    "noGithubRepo": "No Github repository",
+    "liveProject": "Live Project",
+    "noLivePro": "No Live Project"
   },
   "NotFound": {
     "title": "404",
