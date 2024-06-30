@@ -27,6 +27,20 @@
     "operationDev": "Operations Engineer",
     "operationDevDesc": "I am also capable of operations and maintenance work, in several work experience as many front and back-end project on-line, deployment and maintenance work, to understand the project on-line process as well as automated continuous integration and continuous deployment of the implementation process, has a wealth of experience in operations and maintenance."
   },
+  "Resume": {
+    "experienceTitle": "Experience",
+    "experience": "My Experience",
+    "experienceDesc": "I have been working as a front-end web developer for more than 3 years, and 1 one years as a fullstack web developer for 1 year. I have extensive experience in web development.",
+    "educationTitle": "Education",
+    "education": "My Education",
+    "educationDesc": "I am a graduate of the School of Computer Science and Technology with a keen interest in exploring new things in computing.",
+    "skillsTitle": "Skills",
+    "skills": "My Skills",
+    "skillsDesc": "My main work direction is front-end development, but not limited to front-end development, proficient in front-end development technology stack including HTML, CSS3, Javascript, React, Vue2/3, Nodejs, but also familiar with the back-end related development process.",
+    "aboutTitle": "About Me",
+    "about": "About Me",
+    "aboutDesc": "Love life, love to learn, love to code, the following is my personal relevant information, looking forward to communicate with you, more than just work."
+  },
   "Work": {
     "phone": "Phone",
     "phoneValue": "(+86) 152 7277 9735",

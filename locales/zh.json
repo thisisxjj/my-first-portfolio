@@ -28,6 +28,20 @@
     "operationDev": "运维工程师",
     "operationDevDesc": "我也是能够胜任运维的工作，在几家工作经历中担任过许多前后端项目的上线、部署和维护工作，了解项目上线流程以及自动化持续集成和持续部署实施过程，有着丰富的运维经验。"
   },
+  "Resume": {
+    "experienceTitle": "工作经历",
+    "experience": "我的工作经历",
+    "experienceDesc": "我已担任前端开发工程师超过 3 年，担任全栈开发工程师 1 年。我在网站界面开发以及后台服务开发方面拥有丰富的经验。",
+    "educationTitle": "教育经历",
+    "education": "我的教育经历",
+    "educationDesc": "我是一名计算机科学与技术学院的毕业生,对不断探索计算机新鲜事物有着浓厚的兴趣。",
+    "skillsTitle": "技术栈",
+    "skills": "我的技术栈",
+    "skillsDesc": "我主要的工作方向是前端开发,但又不限于前端开发,精通前端开发的技术栈包括HTML、CSS3、Javascript、React、Vue2/3、Nodejs,同时还熟悉后台相关开发流程。",
+    "aboutTitle": "关于我",
+    "about": "关于我",
+    "aboutDesc": "热爱生活、热爱学习、热爱代码，以下是我的个人相关信息，期待能与你的沟通交流、不止于工作。"
+  },
   "Work": {
     "phone": "电话",
     "phoneValue": "15272779735",

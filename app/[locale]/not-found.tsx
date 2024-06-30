@@ -7,7 +7,7 @@ export default function NotFound() {
   const t = useTranslations('NotFound')
 
   return (
-    <section className="h-full w-full overflow-hidden font-secondary flex flex-col items-center justify-center">
+    <section className="h-full w-full pt-20 overflow-hidden font-secondary flex flex-col items-center justify-center">
       <CountNum />
       <div className="flex items-center flex-col gap-4">
         <h2 className="capitalize">{t('main')}</h2>

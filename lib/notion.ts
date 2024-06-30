@@ -41,6 +41,48 @@ export const getAboutMeData = cache((locale: string) => {
     })
 })
 
+export const getExperienceAndEducationData = cache((locale: string) => {
+  return notionClient.databases
+    .query({
+      sorts: [{ property: 'sortNum', direction: 'ascending' }],
+      database_id: process.env.NOTION_EXPERIENCE_DATABASE_ID!,
+    })
+    .then((data) => {
+      const results = {}
+      const newData = data.results
+        .map((item: any) => {
+          const newItem = {} as Record<string, any>
+          for (let key in item.properties) {
+            const [name, curLocale] = key.split('_')
+            const curObj = item.properties[key]
+            const type = curObj?.type
+            const curValObj = curObj?.[type] || []
+            if (curLocale && curLocale === locale) {
+              newItem[name] = curValObj[0]?.text.content
+            } else if (!curLocale) {
+              if (key === 'Tag') {
+                newItem[name] = curValObj[0]?.name
+              } else {
+                newItem[name] = curValObj[0]?.text.content ?? ''
+              }
+            }
+          }
+
+          return newItem
+        })
+        .reduce((acc, cur) => {
+          if (!acc[cur.Tag]) {
+            acc[cur.Tag] = [cur]
+          } else {
+            acc[cur.Tag].push(cur)
+          }
+          return acc
+        }, results)
+
+      return newData
+    })
+})
+
 export const getWorkProjectData = cache((locale: string) => {
   return notionClient.databases
     .query({
