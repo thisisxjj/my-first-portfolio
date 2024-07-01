@@ -6,8 +6,8 @@
     "services": "职业",
     "resume": "简历",
     "home": "首页",
-    "hireMe": "聘用我",
-    "404": "404"
+    "english": "英语",
+    "chinese": "中文"
   },
   "Home": {
     "profession": "软件工程师",

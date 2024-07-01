@@ -1,11 +1,14 @@
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { Link } from '@/navigation'
 import Nav from './Nav'
 import { Button } from '../ui/button'
 import MobileNav from './MobileNav'
+import { cn } from '@/lib/utils'
+import LanguageSelect from './LanguageSelect'
 
 const Header = () => {
-  const t = useTranslations('Index')
+  const locale = useLocale()
+
   return (
     <header className="py-8 xl:py-12 text-white">
       <div className="container mx-auto flex justify-between items-center">
@@ -18,13 +21,12 @@ const Header = () => {
 
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href="/contact">
-            <Button>{t('hireMe')}</Button>
-          </Link>
+          <LanguageSelect defaultValue={locale} />
         </div>
 
         {/* mobile nav */}
-        <div className="xl:hidden">
+        <div className="flex items-center gap-4 xl:hidden">
+          <LanguageSelect defaultValue={locale} />
           <MobileNav />
         </div>
       </div>

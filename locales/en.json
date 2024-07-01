@@ -6,7 +6,8 @@
     "resume": "Resume",
     "work": "Work",
     "home": "Home",
-    "hireMe": "Hire me"
+    "english": "English",
+    "chinese": "Chinese"
   },
   "Home": {
     "profession": "Software Developer",
