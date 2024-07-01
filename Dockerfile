@@ -29,10 +29,21 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# 设置构建参数
+ARG NOTION_TOKEN
+ARG NOTION_ABOUT_DATABASE_ID
+ARG NOTION_PROJECT_DATABASE_ID
+ARG NOTION_EXPERIENCE_DATABASE_ID
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
+# 导出环境变量
+RUN echo "NOTION ---> "
+RUN echo "NOTION_TOKEN=${NOTION_TOKEN}" >> .env.production
+RUN echo "NOTION_ABOUT_DATABASE_ID=${NOTION_ABOUT_DATABASE_ID}" >> .env.production
+RUN echo "NOTION_PROJECT_DATABASE_ID=${NOTION_PROJECT_DATABASE_ID}" >> .env.production
+RUN echo "NOTION_EXPERIENCE_DATABASE_ID=${NOTION_EXPERIENCE_DATABASE_ID}" >> .env.production
 
 RUN \
   if [ -f yarn.lock ]; then yarn run build; \

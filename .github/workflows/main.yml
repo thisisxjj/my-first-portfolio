@@ -20,7 +20,12 @@ jobs:
         run: |
           echo ${{ secrets.ALIYUN_DOCKER_PASSWORD }} | docker login ${{ vars.REGISTRY_MIRROR }} --username ${{ secrets.ALIYUN_DOCKER_USERNAME }} --password-stdin
 
-          docker image build -t ${{ vars.APP_NAME }}:latest .
+          docker image build -t ${{ vars.APP_NAME }}:latest \                                    3m 39s   09:26:31
+            --build-arg NOTION_TOKEN=${{ secrets.NOTION_TOKEN }} \
+            --build-arg NOTION_ABOUT_DATABASE_ID=${{ secrets.NOTION_ABOUT_DATABASE_ID }} \
+            --build-arg NOTION_PROJECT_DATABASE_ID=${{ secrets.NOTION_PROJECT_DATABASE_ID }} \
+            --build-arg NOTION_EXPERIENCE_DATABASE_ID=${{ secrets.NOTION_EXPERIENCE_DATABASE_ID }} \
+            .
           docker tag ${{ vars.APP_NAME }} ${{ vars.REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
           docker push ${{ vars.REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
           docker logout
