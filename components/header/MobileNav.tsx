@@ -51,7 +51,7 @@ const MobileNav = () => {
         <SheetTitle></SheetTitle>
         <SheetDescription></SheetDescription>
         {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mt-16 mb-20 md:mt-32 md:mb-40 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
               XiaJJ<span className="text-accent">.</span>
