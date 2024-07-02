@@ -43,6 +43,12 @@
     "aboutDesc": "热爱生活、热爱学习、热爱代码，以下是我的个人相关信息，期待能与你的沟通交流、不止于工作。"
   },
   "Work": {
+    "githubRepo": "Github 仓库",
+    "noGithubRepo": "无Github仓库",
+    "liveProject": "在线示例",
+    "noLivePro": "无在线示例"
+  },
+  "Contact": {
     "phone": "电话",
     "phoneValue": "15272779735",
     "email": "邮箱",
@@ -52,15 +58,21 @@
     "formTitle": "让我们携手合作",
     "formDesc": "如果你看到了这里, 如果你们团队正在招兵买马, 如果你觉得我合适, 请给我发送信息, 我会立刻回复你!",
     "formName": "姓名",
+    "formNameRequired": "请输入你的姓名",
+    "formNameMaxLength": "请输入不超过50长度的姓名",
     "formCompany": "公司名称",
+    "formCompanyRequired": "请输入你的公司名称",
     "formEmail": "邮箱地址",
+    "formEmailRequired": "请输入你的邮箱地址",
+    "formEmailValid": "请输入合法的邮箱地址",
     "formPhone": "电话号码",
+    "formPhoneRequired": "请输入你的电话号码",
+    "formPhoneValid": "请输入合法的电话号码",
     "formMessage": "请在这里输入相关信息",
+    "formMessageRequired": "请输入你的相关信息",
     "formSubmit": "发送消息",
-    "githubRepo": "Github 仓库",
-    "noGithubRepo": "无Github仓库",
-    "liveProject": "在线示例",
-    "noLivePro": "无在线示例"
+    "formSubmitSuccess": "消息发送成功",
+    "formSubmitFail": "消息发送失败"
   },
   "NotFound": {
     "title": "404",

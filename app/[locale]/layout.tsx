@@ -6,6 +6,7 @@ import { JetBrains_Mono } from 'next/font/google'
 import Header from '@/components/header/Header'
 import PageTransition from '@/components/transition/PageTransition'
 import StairTransition from '@/components/transition/StairTransition'
+import { Toaster } from '@/components/ui/sonner'
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default async function LocaleLayout({
           <Header />
           <StairTransition />
           <PageTransition>{children}</PageTransition>
+          <Toaster position="top-center" richColors />
         </NextIntlClientProvider>
       </body>
     </html>

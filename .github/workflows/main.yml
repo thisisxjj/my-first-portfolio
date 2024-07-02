@@ -25,6 +25,8 @@ jobs:
             --build-arg NOTION_ABOUT_DATABASE_ID=${{ secrets.NOTION_ABOUT_DATABASE_ID }} \
             --build-arg NOTION_PROJECT_DATABASE_ID=${{ secrets.NOTION_PROJECT_DATABASE_ID }} \
             --build-arg NOTION_EXPERIENCE_DATABASE_ID=${{ secrets.NOTION_EXPERIENCE_DATABASE_ID }} \
+            --build-arg QQ_SMTP_EMAIL=${{ secrets.QQ_SMTP_EMAIL }} \
+            --build-arg QQ_SMTP_SECRET_CODE=${{ secrets.QQ_SMTP_SECRET_CODE }} \
             .
           docker tag ${{ vars.APP_NAME }} ${{ vars.REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest
           docker push ${{ vars.REGISTRY_MIRROR }}/${{ vars.REGISTRY_NAMESPACE }}/${{ vars.APP_NAME }}:latest

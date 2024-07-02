@@ -34,7 +34,7 @@ export async function generateMetadata({
 }
 
 const ContactPage = () => {
-  const t = useTranslations('Work')
+  const t = useTranslations('Contact')
 
   return (
     <MotionContainer>

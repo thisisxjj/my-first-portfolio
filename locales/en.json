@@ -43,6 +43,12 @@
     "aboutDesc": "Love life, love to learn, love to code, the following is my personal relevant information, looking forward to communicate with you, more than just work."
   },
   "Work": {
+    "githubRepo": "Github Repository",
+    "noGithubRepo": "No Github repository",
+    "liveProject": "Live Project",
+    "noLivePro": "No Live Project"
+  },
+  "Contact": {
     "phone": "Phone",
     "phoneValue": "(+86) 152 7277 9735",
     "email": "Email",
@@ -52,15 +58,21 @@
     "formTitle": "Let's work together",
     "formDesc": "If you're reading this, if your team is recruiting, if you think I'm a good fit, send me a message and I'll get right back to you!",
     "formName": "Full Name",
+    "formNameRequired": "Please enter your full name",
+    "formNameMaxLength": "Please enter your full name of no more than 50 lengths",
     "formCompany": "Company Name",
+    "formCompanyRequired": "Please enter your company name",
     "formEmail": "Email Address",
+    "formEmailRequired": "Please enter your email address",
+    "formEmailValid": "Please enter a valid email address",
     "formPhone": "Phone Number",
+    "formPhoneRequired": "Please enter your phone number",
+    "formPhoneValid": "Please enter a valid phone number",
     "formMessage": "Type your message here",
+    "formMessageRequired": "Please enter your message",
     "formSubmit": "Send Message",
-    "githubRepo": "Github Repository",
-    "noGithubRepo": "No Github repository",
-    "liveProject": "Live Project",
-    "noLivePro": "No Live Project"
+    "formSubmitSuccess": "Message sent successfully",
+    "formSubmitFail": "Message sent failed"
   },
   "NotFound": {
     "title": "404",
