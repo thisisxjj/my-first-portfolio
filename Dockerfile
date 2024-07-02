@@ -34,6 +34,8 @@ ARG NOTION_TOKEN
 ARG NOTION_ABOUT_DATABASE_ID
 ARG NOTION_PROJECT_DATABASE_ID
 ARG NOTION_EXPERIENCE_DATABASE_ID
+ARG QQ_SMTP_EMAIL
+ARG QQ_SMTP_SECRET_CODE
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
@@ -44,6 +46,8 @@ RUN echo "NOTION_TOKEN=${NOTION_TOKEN}" >> .env.production
 RUN echo "NOTION_ABOUT_DATABASE_ID=${NOTION_ABOUT_DATABASE_ID}" >> .env.production
 RUN echo "NOTION_PROJECT_DATABASE_ID=${NOTION_PROJECT_DATABASE_ID}" >> .env.production
 RUN echo "NOTION_EXPERIENCE_DATABASE_ID=${NOTION_EXPERIENCE_DATABASE_ID}" >> .env.production
+RUN echo "QQ_SMTP_EMAIL=${QQ_SMTP_EMAIL}" >> .env.production
+RUN echo "QQ_SMTP_SECRET_CODE=${QQ_SMTP_SECRET_CODE}" >> .env.production
 
 RUN \
   if [ -f yarn.lock ]; then yarn run build; \
