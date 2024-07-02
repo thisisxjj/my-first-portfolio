@@ -131,7 +131,7 @@ const WorkContent = ({ projects }: WorkContentProps) => {
                 <Image
                   src={project.image}
                   fill
-                  className="object-contain"
+                  className="object-cover xl:object-contain"
                   alt=""
                 />
               </div>

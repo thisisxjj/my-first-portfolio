@@ -80,5 +80,12 @@
     "desc1": "This may not mean anything.",
     "desc2": "I'm probably working on something that has blown up.",
     "back": "Back to Home"
+  },
+  "Error": {
+    "title": "500",
+    "main": "Something went wrong ~",
+    "desc1": "Sorry, The page encountered an unknown error",
+    "desc2": "I will fix it right away, please try again later!",
+    "back": "Back to Home"
   }
 }
