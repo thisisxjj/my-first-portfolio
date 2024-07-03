@@ -7,7 +7,15 @@ let lastSendExpiryTime: number | null = null
 
 export async function POST(request: NextRequest) {
   try {
-    const { digest, message } = await request.json()
+    if (process.env.NODE_ENV !== 'production')
+      return NextResponse.json(
+        { success: false, message: 'Dev Mode Should not send message' },
+        {
+          status: 400,
+        }
+      )
+
+    const { message } = await request.json()
 
     if (lastSendExpiryTime && Date.now() < lastSendExpiryTime) {
       return NextResponse.json(
