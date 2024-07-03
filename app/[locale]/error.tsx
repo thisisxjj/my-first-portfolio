@@ -2,6 +2,7 @@
 
 import CountNum from '@/components/not-found/CountNum'
 import { Button } from '@/components/ui/button'
+import { sendErrorMessage } from '@/lib/api'
 import { Link } from '@/navigation'
 import { useMessages } from 'next-intl'
 import { useEffect } from 'react'
@@ -15,6 +16,17 @@ export default function Error({
 }) {
   const messages = useMessages()
   const errorMessages = messages.Error as Record<string, string>
+
+  useEffect(() => {
+    try {
+      sendErrorMessage({
+        message: error.message,
+        digest: error.digest,
+      })
+    } catch (e) {
+      console.log('Sending error message failed: ', e)
+    }
+  }, [error])
 
   return (
     <section className="h-full w-full pt-20 overflow-hidden font-secondary flex flex-col items-center justify-center">
