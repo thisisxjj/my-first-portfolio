@@ -19,7 +19,7 @@ const ResumeDownloadButton = ({ locale }: { locale: string }) => {
       className="uppercase flex items-center gap-2"
       onClick={() => updateResumeDownloadCount(locale)}
     >
-      <Link href={`/api/download-pdf?time=${Date.now()}`}>
+      <Link href="#">
         <span>{homeMessages['downloadResume']}</span>
         <FiDownload className="text-xl" />
       </Link>
