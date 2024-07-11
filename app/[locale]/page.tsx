@@ -1,11 +1,10 @@
 import { getTranslations } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
-import { FiDownload } from 'react-icons/fi'
 import Photo from '@/components/socials/Photo'
 import Socials from '@/components/socials/Socials'
 import Stats from '@/components/socials/Stats'
-import { Button } from '@/components/ui/button'
 import type { Metadata } from 'next'
+import ResumeDownloadButton from '@/components/resume/ResumeDownloadButton'
 
 export async function generateMetadata({
   params: { locale },
@@ -16,7 +15,7 @@ export async function generateMetadata({
   return { title: `${t('home')} - This is Xjj` }
 }
 
-const Home = () => {
+const Home = ({ params: { locale } }: { params: { locale: string } }) => {
   const t = useTranslations('Home')
   return (
     <section className="h-full">
@@ -34,14 +33,7 @@ const Home = () => {
             <p className="max-w-[500px] mb-9 text-white/80">{t('slogan')}</p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download Resume</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <ResumeDownloadButton locale={locale} />
               <div className="mb-8 xl:mb-0">
                 <Socials
                   containerStyles="flex gap-6"

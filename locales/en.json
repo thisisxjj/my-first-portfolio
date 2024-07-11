@@ -16,7 +16,8 @@
     "workExperience": "Years of experiences",
     "projectCompleted": "Projects completed",
     "masterTechnologies": "Technologies mastered",
-    "codeCommit": "Code committed"
+    "codeCommit": "Code committed",
+    "downloadResume": "Download Resume"
   },
   "Services": {
     "webDev": "Frontend Web Development",

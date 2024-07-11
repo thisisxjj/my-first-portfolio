@@ -16,7 +16,8 @@
     "workExperience": "年工作经验",
     "projectCompleted": "个项目完成",
     "masterTechnologies": "个关键技术点",
-    "codeCommit": "次代码提交"
+    "codeCommit": "次代码提交",
+    "downloadResume": "下载简历"
   },
   "Services": {
     "webDev": "前端开发工程师",
