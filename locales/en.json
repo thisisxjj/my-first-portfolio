@@ -17,7 +17,8 @@
     "projectCompleted": "Projects completed",
     "masterTechnologies": "Technologies mastered",
     "codeCommit": "Code committed",
-    "downloadResume": "Download Resume"
+    "downloadResume": "Download Resume",
+    "resumeFilename": "xjj-resume.pdf"
   },
   "Services": {
     "webDev": "Frontend Web Development",

@@ -17,7 +17,8 @@
     "projectCompleted": "个项目完成",
     "masterTechnologies": "个关键技术点",
     "codeCommit": "次代码提交",
-    "downloadResume": "下载简历"
+    "downloadResume": "下载简历",
+    "resumeFilename": "夏JayJay-个人简历.pdf"
   },
   "Services": {
     "webDev": "前端开发工程师",
