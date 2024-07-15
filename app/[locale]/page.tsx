@@ -5,7 +5,7 @@ import Socials from '@/components/socials/Socials'
 import Stats from '@/components/socials/Stats'
 import type { Metadata } from 'next'
 import ResumeDownloadButton from '@/components/resume/ResumeDownloadButton'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 export async function generateMetadata({
   params: { locale },
@@ -50,7 +50,7 @@ const Home = ({ params: { locale } }: { params: { locale: string } }) => {
         </div>
         <Stats />
       </div>
-      <div className="absolute bottom-[-48px] py-2 w-full text-center">
+      {/* <div className="absolute bottom-[-48px] py-2 w-full text-center">
         <Link
           target="_blank"
           className="text-white/55 hover:text-white transition-colors"
@@ -58,7 +58,7 @@ const Home = ({ params: { locale } }: { params: { locale: string } }) => {
         >
           鄂ICP备2024063440号-1
         </Link>
-      </div>
+      </div> */}
     </section>
   )
 }
