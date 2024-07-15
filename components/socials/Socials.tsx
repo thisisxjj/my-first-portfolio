@@ -33,7 +33,7 @@ const Socials = ({
           </TooltipTrigger>
           <TooltipContent>Github</TooltipContent>
         </Tooltip>
-        <Tooltip>
+        <Tooltip delayDuration={0.5}>
           <TooltipTrigger asChild>
             <Link href="" className={iconStyles}>
               <AiFillWechat />

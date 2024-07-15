@@ -7,12 +7,18 @@ import Header from '@/components/header/Header'
 import PageTransition from '@/components/transition/PageTransition'
 import StairTransition from '@/components/transition/StairTransition'
 import { Toaster } from '@/components/ui/sonner'
+import { Metadata } from 'next'
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
   variable: '--font-jetBrainsMono',
 })
+
+export const metadata: Metadata = {
+  description:
+    'thisisxjj, xjj, jayjay, jayjay xia, xiajj, Jay Jay xia, Jay xia, javascript, java, react, vue, vue3, nextjs, tailwind, tailwindcss',
+}
 
 export default async function LocaleLayout({
   children,
