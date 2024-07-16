@@ -16,6 +16,23 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  keywords: [
+    'thisisxjj',
+    'xjj',
+    'jayjay',
+    'jayjay xia',
+    'xiajj',
+    'Jay Jay xia',
+    'Jay xia',
+    'javascript',
+    'java',
+    'react',
+    'vue',
+    'vue3',
+    'nextjs',
+    'tailwind',
+    'tailwindcss',
+  ],
   description:
     'thisisxjj, xjj, jayjay, jayjay xia, xiajj, Jay Jay xia, Jay xia, javascript, java, react, vue, vue3, nextjs, tailwind, tailwindcss',
 }
